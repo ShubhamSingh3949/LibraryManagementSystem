@@ -1,0 +1,9 @@
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  'https://qilrwcmuzcwqvzklotxg.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFpbHJ3Y211emN3cXZ6a2xvdHhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4MjQwMTgsImV4cCI6MjEwNTQwMDAxOH0.F02QxECng2gn4weBa9JwTQpjehmmYvUfJNZoc8hEup8'
+);
+
+const q = supabase.from('floors').insert({ id: 'test-f2', name: 'Test Floor' });
+console.log("Has catch method?", typeof q.catch === 'function');
